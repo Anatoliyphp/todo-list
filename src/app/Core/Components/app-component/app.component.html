@@ -1,0 +1,12 @@
+<div>
+  <app-item 
+    *ngFor="let task of tasks"
+  [text]="task"
+  (onDeleteTask)="onDelete($event)"
+  ></app-item>
+</div>
+
+<form #myForm="ngForm">
+  <input ngModel name="task" type="text" placeholder="Введите задачу">
+  <button (click)="addTask(myForm)">Add item</button>
+</form>

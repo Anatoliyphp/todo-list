@@ -1,0 +1,7 @@
+.tasks{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    width: 500px;
+    justify-content: space-between;
+}

@@ -1,9 +1,22 @@
-<div>
-  <app-item 
-    *ngFor="let task of tasks"
-  [text]="task"
-  (onDeleteTask)="onDelete($event)"
-  ></app-item>
+<div class="tasks">
+  <div>
+    <h2>All tasks</h2>
+    <app-item 
+        *ngFor="let task of tasks"
+      [task]="task"
+      (onDeleteTask)="onDelete($event)"
+      (onCompleteTask)="onComplete($event)"
+    ></app-item>
+  </div>
+  <div>
+    <h2>Completed tasks</h2>
+    <app-item 
+        *ngFor="let task of completeTasks"
+      [task]="task"
+      (onDeleteTask)="onDelete($event)"
+      (onCompleteTask)="onComplete($event)"
+    ></app-item>
+  </div>
 </div>
 
 <form #myForm="ngForm">
